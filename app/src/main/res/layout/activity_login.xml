@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/zhnumber"
+        android:layout_width="408dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="请输入账号"
+        android:inputType="number"
+        android:background="@drawable/textground"
+        app:layout_constraintBottom_toTopOf="@+id/zpsnumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qqlogo" />
+
+    <EditText
+        android:id="@+id/zpsnumber"
+        android:layout_width="408dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:background="@drawable/textground"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zhnumber" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="166dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="188dp"
+        android:text="登录"
+        android:textSize="20dp"
+        style="@style/buttonstyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/qqlogo"
+        android:layout_width="116dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="124dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/qq" />
+
+    <TextView
+        android:id="@+id/zhuce"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="43dp"
+        android:text="注册账号"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zpsnumber">
+
+        <RadioGroup
+            android:layout_width="204dp"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="172dp"
+                android:layout_height="37dp"
+                android:text="记住密码"
+                android:textSize="16dp" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/forgrtps"
+            android:layout_width="197dp"
+            android:layout_height="54dp"
+            android:text="                      忘记密码"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

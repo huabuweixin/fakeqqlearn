@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyTheme" parent="Theme.Fakeqq">
+        <item name="android:windowFullscreen">true</item>
+        <!-- hide title bar -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:background">#88D0E7F4</item>
+        <!-- 控件按压时的色调-->
+        <item name="android:colorControlHighlight">#FF00FF</item>
+        <!-- CheckBox,RadioButton,SwitchCompat等默认状态的颜色 -->
+        <item name="android:colorControlNormal">#FFD700</item>
+
+
+    </style>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" /> <!-- 允许应用程序写出到联系人 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" /> <!-- 允许应用程序读取到联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme"
+        tools:targetApi="31">
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.example.fakeqq.provider"
+            android:exported="true"
+            tools:ignore="WrongManifestParent" />
+        <activity
+            android:name=".findlinkviews"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Bookstore"
+            android:exported="true" />
+        <activity
+            android:name=".Lookpis"
+            android:exported="true" />
+        <activity
+            android:name=".chatview"
+            android:exported="true"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name=".notfirst"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".introduceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".startactivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemActivity"
+            android:exported="true"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name=".LostfindActivity"
+            android:exported="true"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/MyTheme" />
+    </application>
+
+</manifest>

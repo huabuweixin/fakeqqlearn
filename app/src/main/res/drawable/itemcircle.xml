@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 图层1(oval) -->
+    <item android:left="-10dp" android:top="-10dp" android:right="-10dp" android:bottom="-10dp">
+        <shape android:shape="oval">
+            <!-- oval_inner[内部] -->
+            <solid android:color="#F00" />
+            <!-- oval_outer[边线] -->
+            <stroke android:width="10dp" android:color="#d1e7f4" />
+            <!-- oval_inner_size[大小(除去边线)] -->
+            <size android:height="80dp" android:width="80dp" />
+            <!-- 使oval_inner透明，裸露出将来设置的背景图片 -->
+            <gradient android:centerColor="#0000" />
+        </shape>
+    </item>
+</layer-list>
