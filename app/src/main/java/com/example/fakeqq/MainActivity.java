@@ -105,14 +105,12 @@ public class MainActivity extends AppCompatActivity {
     private void saveRegisterInfo(String userName,String password){
         String md5Psw = password;//获取密码
         SharedPreferences sp=getSharedPreferences("loginInfo", MODE_PRIVATE);
-        //获取编辑器， SharedPreferences.Editor  editor -> sp.edit();
+        //获取编辑器，
         SharedPreferences.Editor editor=sp.edit();
         //以用户名为key，密码为value保存在SharedPreferences中
         //key,value,如键值对，editor.putString(用户名，密码）;
         editor.putString(userName, md5Psw);
-        //提交修改 editor.commit();
         editor.apply();
-
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

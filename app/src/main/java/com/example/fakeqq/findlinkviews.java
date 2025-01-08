@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import android.net.Uri;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -37,6 +39,8 @@ public class findlinkviews extends AppCompatActivity {
     List<Communication> communications=new ArrayList<>();
     private  linkviewAdapter mAdapter;
     ImageView madd;
+    TextView itemview;
+    TextView Dynaimicview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +107,24 @@ public class findlinkviews extends AppCompatActivity {
                 builder.create().show();
             }
         });
+        itemview=findViewById(R.id.tvbar_user);
+        itemview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(findlinkviews.this,ItemActivity.class);
+                findlinkviews.this.finish();
+                startActivity(intent);
+            }
+        });
+        Dynaimicview=findViewById(R.id.tvbar_dongtai);
+        Dynaimicview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(findlinkviews.this, Dynamic.class);
+                findlinkviews.this.finish();
+                startActivity(intent);
+            }
+        });
 
     }
     private void getContacts() {
@@ -117,8 +139,8 @@ public class findlinkviews extends AppCompatActivity {
         if (cursor != null && cursor.moveToFirst()) {
             do {
                 int id = cursor.getInt(cursor.getColumnIndexOrThrow("_id"));
-                String cName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-                String cNum = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                 String cName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+                 String cNum = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
                 communications.add(new Communication(cName, cNum,id));
             } while (cursor.moveToNext());
         }

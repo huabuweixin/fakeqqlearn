@@ -21,6 +21,7 @@ import java.util.List;
 public class ItemActivity extends AppCompatActivity {
     ListView listView;
     TextView linkview;
+    TextView Dynaimicview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +72,16 @@ public class ItemActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Dynaimicview= findViewById(R.id.tvbar_dongtai);
+        Dynaimicview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ItemActivity.this, Dynamic.class);
+                ItemActivity.this.finish();
+                startActivity(intent);
+            }
+        });
+
 
     }
 

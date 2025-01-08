@@ -2,11 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/item1"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ItemActivity">
-
+    tools:context=".Dynamic"
+    >
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="消息"
+            android:text="动态"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:background="@null"
@@ -43,7 +43,6 @@
             android:src="@drawable/add"
             android:background="@null"/>
     </RelativeLayout>
-
     <FrameLayout
         android:id="@+id/fragment_content"
         android:layout_width="match_parent"
@@ -52,15 +51,78 @@
         android:layout_below="@id/top_bar"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="-2dp">
-        <ListView
-            android:id="@+id/list_view"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:divider="@null"
-            />
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/shuoshuo"
+                android:text="说说"
+                android:textSize="30dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/book"
+                android:text="图书商城"
+                android:textSize="30dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/media"
+                android:text="音乐"
+                android:textSize="30dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/BS"
+                android:text="图片管理器"
+                android:textSize="30dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/BM"
+                android:text="图书商城管理中心"
+                android:textSize="30dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
 
+
+        </LinearLayout>
     </FrameLayout>
-
     <LinearLayout
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
@@ -101,4 +163,5 @@
             android:textColor="@color/black"
             android:text="动态"/>
     </LinearLayout>
+
 </RelativeLayout>
